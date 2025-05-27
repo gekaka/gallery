@@ -1,64 +1,36 @@
-*{
-	margin: 0;
-	font-size: 0;
+/* 去除默认边距 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html,body{
-	height: 100%;
+/* 页面背景色和字体初始化 */
+body {
+    background-color: #E7E7E7;
+    font-family: sans-serif;
 }
 
-body{
-	background-color: #E7E7E7;
-	display: table;
+/* 图片容器：多列排列、换行 */
+#cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px;
+    gap: 20px;
 }
 
-#cont{
-	display: table-cell;
-	vertical-align: middle;
-	text-align: center;
+/* 每张图片样式：固定大小、正方形、背景白色 */
+.ima {
+    width: 200px;
+    height: 200px;
+    background-color: #ffffff;
+    object-fit: cover;
+    transition: transform 0.6s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-.ima{
-	width: 310px;
-	padding: 18px;
-	margin: 30px;
-	background-color: #FFFFFF;
-	transition: transform 0.8s;
-	-webkit-transform: transform 0.8s;
-}
-
-.ima:hover{
-	transform: scale(1.5) rotate(0deg) !important;
-}
-
-#a{
-	transform: rotate(12deg);
-}
-
-#b{
-	transform: rotate(-5deg);
-}
-
-#c{
-	transform: rotate(10deg);
-}
-
-#d{
-	transform: rotate(8deg);
-}
-
-#e{
-	transform: rotate(-10deg);
-}
-
-#f{
-	transform: rotate(-5deg);
-}
-
-#g{
-	transform: rotate(10deg);
-}
-
-#h{
-	transform: rotate(8deg);
+/* 鼠标悬停放大 */
+.ima:hover {
+    transform: scale(1.1);
 }
