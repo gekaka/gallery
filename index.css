@@ -17,7 +17,7 @@ html, body {
     overflow-y: auto;
 }
 
-/* 图片容器，flex 布局支持无限换行 */
+/* 图片容器，flex布局换行、间距控制 */
 #cont {
     display: flex;
     flex-wrap: wrap;
@@ -27,18 +27,25 @@ html, body {
     gap: 30px;
 }
 
-/* 图片样式 */
+/* 每张图外层容器（有边框） */
 .ima {
-    max-width: 310px;
-    max-height: 310px;
-    background-color: #ffffff;
+    display: inline-block;
     padding: 10px;
+    background-color: #ffffff;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
     transition: transform 0.8s;
-    object-fit: cover;
 }
 
-/* 鼠标悬停放大并回正 */
+/* 图片本体：不缩放、不裁切，保持原始比例 */
+.ima img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* 悬停放大并回正 */
 .ima:hover {
     transform: scale(1.5) rotate(0deg) !important;
     z-index: 10;
