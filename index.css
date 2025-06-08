@@ -47,6 +47,6 @@ html, body {
 
 /* 悬停放大并回正 */
 .ima:hover {
-    transform: scale(2) rotate(0deg) !important;
-    z-index: 99;
+    transform: scale(1.5) rotate(0deg) !important;
+    z-index: 10;
 }
