@@ -34,6 +34,8 @@ html, body {
     background-color: #ffffff;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
     transition: transform 0.8s;
+    position: relative;  /* 新增：使放大不影响排版 */
+    z-index: 1;
 }
 
 /* 图片本体：不缩放、不裁切，保持原始比例 */
@@ -45,6 +47,7 @@ html, body {
     max-height: 100%;
 }
 
+/* 悬停放大并回正（放大倍数从1.5改为1.7） */
 .ima:hover {
     transform: scale(1.7) rotate(0deg) !important;
     z-index: 10;
