@@ -45,8 +45,7 @@ html, body {
     max-height: 100%;
 }
 
-/* 悬停放大并回正 */
 .ima:hover {
-    transform: scale(1.5) rotate(0deg) !important;
+    transform: scale(1.7) rotate(0deg) !important;
     z-index: 10;
 }
