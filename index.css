@@ -8,7 +8,7 @@
 /* 页面背景设置 */
 html, body {
     height: 100%;
-    background-image: url('image/background.jpg');
+    background-image: url('image/back.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -27,17 +27,14 @@ html, body {
     gap: 30px;
 }
 
+/* 每张图外层容器（有边框） */
 .ima {
     display: inline-block;
     padding: 10px;
     background-color: #ffffff;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
     transition: transform 0.8s;
-    position: relative;
-    z-index: 1;
-    max-width: 310px; /* 限制每张图的容器最大宽度 */
 }
-
 
 /* 图片本体：不缩放、不裁切，保持原始比例 */
 .ima img {
