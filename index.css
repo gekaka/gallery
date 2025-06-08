@@ -1,11 +1,11 @@
-/* 清除默认样式 */
+/* 基本初始化 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 网页和背景设置 */
+/* 页面背景设置 */
 html, body {
     height: 100%;
     background-image: url('image/back.jpg');
@@ -17,38 +17,29 @@ html, body {
     overflow-y: auto;
 }
 
-/* 容器设置：flex布局，每行最多四个 */
+/* 图片容器，flex 布局支持无限换行 */
 #cont {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding: 50px;
     gap: 30px;
 }
 
-/* 图片统一样式 */
+/* 图片样式 */
 .ima {
-    width: 310px;
-    height: 310px;
+    max-width: 310px;
+    max-height: 310px;
     background-color: #ffffff;
-    padding: 18px;
-    transition: transform 0.8s;
+    padding: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    transition: transform 0.8s;
     object-fit: cover;
 }
 
-/* 悬停时放大、旋转归零 */
+/* 鼠标悬停放大并回正 */
 .ima:hover {
     transform: scale(1.5) rotate(0deg) !important;
+    z-index: 10;
 }
-
-/* 单独定义每张图片的初始旋转角度 */
-#a { transform: rotate(12deg); }
-#b { transform: rotate(-5deg); }
-#c { transform: rotate(10deg); }
-#d { transform: rotate(8deg); }
-#e { transform: rotate(-10deg); }
-#f { transform: rotate(-5deg); }
-#g { transform: rotate(10deg); }
-#h { transform: rotate(8deg); }
